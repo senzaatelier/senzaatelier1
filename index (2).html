@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senza Atelier | Çanta, Ev Ürünleri ve Banyo Paspasları</title>
+<meta name="description" content="Senza Atelier, 2025'te Uşak'ta kuruldu. Seçili çantalar, ev ürünleri ve banyo paspasları. Siparişinizi WhatsApp'tan kolayca verin.">
+<meta name="theme-color" content="#0C0B0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Senza Atelier">
+<meta property="og:description" content="Çanta, ev ürünleri ve banyo paspasları. Uşak'tan Türkiye'nin her yerine.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230C0B0A'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23C9A24B' font-family='serif'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root,[data-tema="siyah-altin"]{
+    --bg:#0C0B0A; --bg2:#12100E; --card:#171411; --foot:#070606;
+    --ink:#F3ECDF; --muted:#A89F8D; --line:rgba(201,162,75,.28);
+    --gold:#C9A24B; --gold2:#EBCB80; --on-gold:#17110A;
+    --ph1:#2A241B; --ph2:#14110D;
+    --arch1:#2B2418; --arch2:#1B1711; --arch3:#3B2F1A;
+    --wa:#1E6B45;
+    --serif:'Bodoni Moda',Georgia,serif;
+    --sans:'Jost',system-ui,sans-serif;
+  }
+  [data-tema="bordo-altin"]{
+    --bg:#1A0A0D; --bg2:#220D11; --card:#2A1216; --foot:#10060A;
+    --ink:#F6ECDF; --muted:#BA9C94; --line:rgba(214,170,90,.30);
+    --gold:#D4AA5A; --gold2:#F0D390; --on-gold:#220B0F;
+    --ph1:#3A171D; --ph2:#1F0C10;
+    --arch1:#4A1A22; --arch2:#2A1015; --arch3:#5A2A24;
+  }
+  [data-tema="lacivert-altin"]{
+    --bg:#08111F; --bg2:#0C1829; --card:#102038; --foot:#050B15;
+    --ink:#F2EDE1; --muted:#9BA7BA; --line:rgba(205,168,86,.30);
+    --gold:#CDA856; --gold2:#EDD08A; --on-gold:#0B1424;
+    --ph1:#16294A; --ph2:#0B172B;
+    --arch1:#17294A; --arch2:#0E1C34; --arch3:#2A3350;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;color-scheme:dark}
+  body{font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.55;color:var(--ink);-webkit-font-smoothing:antialiased;
+    background:radial-gradient(1100px 620px at 78% -8%,color-mix(in srgb,var(--gold) 16%,transparent),transparent 62%) no-repeat,var(--bg)}
+  ::selection{background:var(--gold);color:var(--on-gold)}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit}
+  img{display:block}
+  :focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+
+  /* Duyuru ve üst bar */
+  .announce{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));color:var(--on-gold);text-align:center;font-size:13px;padding:9px 16px;font-weight:500}
+  header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:76px}
+  .bar nav a{margin-right:28px;font-size:14px;color:var(--muted);transition:color .2s}
+  .bar nav a:hover{color:var(--gold2)}
+  .logo{font-family:var(--serif);font-size:30px;letter-spacing:.02em;line-height:1.1;
+    background:linear-gradient(135deg,var(--gold2),var(--gold) 55%,color-mix(in srgb,var(--gold) 60%,#000));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hdr-cta{justify-self:end;font-size:14px;font-weight:500;color:var(--gold2);border-bottom:1px solid var(--gold);padding-bottom:2px}
+
+  /* Hero */
+  .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,84px);align-items:end;padding-top:clamp(40px,7vw,90px);padding-bottom:clamp(52px,7vw,100px)}
+  .hero-copy{align-self:center;padding-bottom:16px}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.6vw,100px);line-height:1.01;letter-spacing:-.025em;color:var(--ink)}
+  .lead{margin-top:26px;max-width:44ch;color:var(--muted);font-size:18px;line-height:1.7;font-weight:300}
+  .actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--on-gold);border:1px solid var(--gold);font-size:15px;font-weight:500;cursor:pointer;transition:background .25s,color .25s,box-shadow .25s}
+  .btn:hover{background:transparent;color:var(--gold2);box-shadow:0 0 0 1px var(--gold2) inset}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--gold)}
+  .btn.ghost:hover{background:var(--gold);color:var(--on-gold);box-shadow:none}
+
+  .arches{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.4vw,18px);align-items:end}
+  .arch{display:block;text-align:left;background:none;border:0;padding:0;cursor:pointer}
+  .arch-shape{display:block;width:100%;position:relative;overflow:hidden;border-radius:999px 999px 0 0;border:1px solid var(--gold);animation:curtain 1.3s cubic-bezier(.65,0,.2,1) both}
+  .arch-shape::before{content:"S";position:absolute;left:0;right:0;bottom:14px;text-align:center;font-family:var(--serif);font-size:clamp(34px,4.4vw,64px);line-height:1;color:color-mix(in srgb,var(--gold) 60%,transparent)}
+  .arch:nth-child(1) .arch-shape{aspect-ratio:1/1.55;background:var(--arch1);animation-delay:.05s}
+  .arch:nth-child(2) .arch-shape{aspect-ratio:1/2;background:var(--arch2);animation-delay:.2s}
+  .arch:nth-child(3) .arch-shape{aspect-ratio:1/1.3;background:var(--arch3);animation-delay:.35s}
+  .arch-shape img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
+  .arch:hover .arch-shape img{transform:scale(1.05)}
+  .arch-name{display:block;margin-top:14px;font-family:var(--serif);font-size:clamp(15px,1.6vw,22px);line-height:1.2;color:var(--gold2)}
+  .arch-note{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  @keyframes curtain{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+  /* Bölümler */
+  .section{padding-block:clamp(56px,8vw,110px)}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,58px);line-height:1.06;letter-spacing:-.02em;color:var(--ink)}
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+  .sec-head p{color:var(--muted);max-width:40ch;font-weight:300}
+
+  /* Araçlar */
+  .tools{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:44px}
+  .tabs{display:flex;flex-wrap:wrap;gap:4px 26px}
+  .tab{background:none;border:0;border-bottom:1px solid transparent;padding:6px 0;font-size:15px;color:var(--muted);cursor:pointer;transition:color .2s}
+  .tab:hover{color:var(--ink)}
+  .tab[aria-pressed="true"]{color:var(--gold2);border-bottom-color:var(--gold)}
+  .tools-r{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .tools input,.tools select{font:inherit;font-size:14px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:6px 2px;color:var(--ink);outline:none;min-width:150px}
+  .tools input:focus,.tools select:focus{border-bottom-color:var(--gold)}
+  .tools input::placeholder{color:var(--muted)}
+  .tools option{background:var(--card);color:var(--ink)}
+
+  /* Ürünler */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:52px 26px}
+  .img{position:relative;display:block;width:100%;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);padding:0;cursor:pointer;background:linear-gradient(165deg,var(--ph1),var(--ph2));transition:border-color .3s}
+  .img::before{content:"S";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:96px;color:color-mix(in srgb,var(--gold) 50%,transparent)}
+  .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s,transform 1s}
+  .img img.alt{opacity:0}
+  .card:hover .img{border-color:var(--gold)}
+  .card:hover .img img.alt{opacity:1}
+  .card:hover .img img.first{transform:scale(1.03)}
+  .badge{position:absolute;top:12px;left:12px;z-index:2;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--on-gold);font-size:12px;font-weight:500;padding:5px 11px}
+  .badge.out{background:var(--ink);color:var(--bg)}
+  .meta{padding-top:16px;display:grid;gap:3px;justify-items:start}
+  .cat{font-size:13px;color:var(--muted)}
+  .name{background:none;border:0;padding:0;text-align:left;cursor:pointer;font-family:var(--serif);font-size:23px;font-weight:400;line-height:1.2;color:var(--ink);transition:color .2s}
+  .name:hover{color:var(--gold2)}
+  .price{font-size:16px;margin-top:2px;color:var(--gold2);font-weight:500}
+  .order{margin-top:12px;font-size:14px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s}
+  .order:hover{color:var(--gold2)}
+  .state{grid-column:1/-1;text-align:center;color:var(--muted);padding:70px 0}
+
+  /* Ürün penceresi */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;padding:18px;z-index:80}
+  .modal.open{display:flex}
+  .box{position:relative;background:var(--card);border:1px solid var(--gold);max-width:980px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr}
+  .main-wrap{position:relative;aspect-ratio:4/5;background:linear-gradient(165deg,var(--ph1),var(--ph2))}
+  .main-wrap::before{content:"S";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:120px;color:color-mix(in srgb,var(--gold) 50%,transparent)}
+  .main-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .thumbs{display:flex;gap:8px;padding:10px;overflow-x:auto}
+  .thumbs button{width:58px;height:58px;padding:0;border:2px solid transparent;background:none;cursor:pointer;flex:none}
+  .thumbs button.on{border-color:var(--gold)}
+  .thumbs img{width:100%;height:100%;object-fit:cover}
+  .detail{padding:clamp(24px,4vw,52px);display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .detail h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,42px);line-height:1.1;color:var(--ink)}
+  .detail .price{font-size:22px}
+  .desc{color:var(--muted);white-space:pre-line;line-height:1.75;font-weight:300}
+  .detail .btn{margin-top:10px}
+  .close{position:absolute;top:10px;right:10px;width:42px;height:42px;z-index:3;background:var(--card);border:1px solid var(--gold);color:var(--gold2);cursor:pointer;font-size:17px}
+
+  /* Hikaye */
+  .story{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,110px);align-items:start}
+  .story p{margin-top:24px;max-width:50ch;color:var(--muted);font-size:18px;line-height:1.8;font-weight:300}
+  .lines{list-style:none;border-bottom:1px solid var(--line)}
+  .lines li{padding:26px 0;border-top:1px solid var(--line)}
+  .lines strong{display:block;font-family:var(--serif);font-weight:400;font-size:27px;color:var(--gold2);margin-bottom:4px}
+  .lines span{color:var(--muted);font-weight:300}
+
+  /* Sipariş adımları */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,5vw,72px);margin-top:46px;list-style:none}
+  .step{border-top:1px solid var(--gold);padding-top:22px}
+  .step .n{font-family:var(--serif);font-size:72px;line-height:1;color:var(--gold)}
+  .step h3{font-family:var(--serif);font-weight:400;font-size:25px;margin:14px 0 8px;color:var(--ink)}
+  .step p{color:var(--muted);font-weight:300;max-width:34ch}
+
+  /* Alt bilgi */
+  footer{background:var(--foot);color:var(--muted);padding:clamp(48px,6vw,80px) 0 34px;border-top:1px solid var(--gold)}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+  .foot .logo{font-size:36px;display:inline-block}
+  .foot p{margin-top:14px;font-weight:300;max-width:34ch}
+  .foot h4{font-weight:500;font-size:14px;color:var(--gold2);margin-bottom:12px}
+  .foot ul{list-style:none;display:grid;gap:8px;font-weight:300}
+  .foot a:hover{color:var(--gold2);text-decoration:underline}
+  .copy{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;font-weight:300}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:50;width:56px;height:56px;border-radius:50%;background:var(--wa);border:1px solid var(--gold);display:grid;place-items:center;box-shadow:0 6px 22px rgba(0,0,0,.5);transition:transform .25s}
+  .float:hover{transform:scale(1.07)}
+  .float svg{width:28px;height:28px;fill:#fff}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .story-grid,.steps,.foot{grid-template-columns:1fr}
+  }
+  @media(max-width:760px){
+    .bar{grid-template-columns:auto 1fr}
+    .bar nav{display:none}
+    .logo{font-size:25px}
+    .box{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce" id="announce">Türkiye'nin her yerine gönderim. Siparişinizi WhatsApp'tan birlikte tamamlıyoruz.</div>
+
+<header>
+  <div class="wrap bar">
+    <nav aria-label="Ana menü">
+      <a href="#koleksiyon">Koleksiyon</a>
+      <a href="#hikaye">Hikâyemiz</a>
+      <a href="#siparis">Sipariş</a>
+    </nav>
+    <a href="#" class="logo" id="logo">Senza Atelier</a>
+    <a class="hdr-cta" id="hdrWa" href="#" target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div class="hero-copy">
+    <h1 id="heroTitle">Gündelik olanı özel kılan parçalar.</h1>
+    <p class="lead" id="heroText">Senza Atelier, 2025'te Uşak'ta kuruldu. Çanta, ev ürünleri ve banyo paspaslarını sizin için seçiyoruz.</p>
+    <div class="actions">
+      <a class="btn" href="#koleksiyon">Koleksiyonu gör</a>
+      <a class="btn ghost" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+    </div>
+  </div>
+  <div class="arches" id="arches" aria-label="Koleksiyonlar"></div>
+</section>
+
+<section class="section wrap" id="koleksiyon" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="sec-head">
+    <h2>Koleksiyon</h2>
+    <p id="count"></p>
+  </div>
+  <div class="tools">
+    <div class="tabs" id="tabs" role="group" aria-label="Kategoriler"></div>
+    <div class="tools-r">
+      <input id="search" type="search" placeholder="Ürün ara" aria-label="Ürün ara">
+      <select id="sort" aria-label="Sırala">
+        <option value="">Önerilen sıralama</option>
+        <option value="asc">Fiyat: düşükten yükseğe</option>
+        <option value="desc">Fiyat: yüksekten düşüğe</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid" id="grid"><div class="state">Ürünler yükleniyor</div></div>
+</section>
+
+<section class="section story" id="hikaye">
+  <div class="wrap story-grid">
+    <div>
+      <h2>2025'te Uşak'ta, sade ve kullanışlı parçalarla başladık.</h2>
+      <p id="storyText">Senza Atelier'de her ürünü evinizde ve gününüzde gerçekten işe yarayacak mı diye düşünerek seçiyoruz. Küçük bir ekibiz, her siparişle bizzat ilgileniyoruz ve sorularınızı doğrudan WhatsApp'tan yanıtlıyoruz.</p>
+    </div>
+    <ul class="lines">
+      <li><strong>Çantalar</strong><span>Günlük kullanım ve özel anlar için seçilmiş modeller.</span></li>
+      <li><strong>Ev ürünleri</strong><span>Yaşam alanınıza sıcaklık ve düzen katan parçalar.</span></li>
+      <li><strong>Banyo paspasları</strong><span>Banyoda konfor ve şıklığı bir araya getiren paspaslar.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section wrap" id="siparis">
+  <h2>Sipariş vermek üç adım</h2>
+  <ol class="steps">
+    <li class="step"><span class="n">1</span><h3>Ürünü seçin</h3><p>Koleksiyonda beğendiğiniz ürünün detayına bakın.</p></li>
+    <li class="step"><span class="n">2</span><h3>Bize yazın</h3><p>"WhatsApp'tan sipariş ver" düğmesi mesajı sizin için hazırlar.</p></li>
+    <li class="step"><span class="n">3</span><h3>Birlikte tamamlayalım</h3><p>Ödeme ve gönderim ayrıntılarını WhatsApp'ta netleştirir, ürünü kargoya veririz.</p></li>
+  </ol>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo">Senza Atelier</div>
+        <p>Çanta, ev ürünleri ve banyo paspasları. Uşak'tan Türkiye'nin her yerine.</p>
+      </div>
+      <div>
+        <h4>Keşfedin</h4>
+        <ul>
+          <li><a href="#koleksiyon">Koleksiyon</a></li>
+          <li><a href="#hikaye">Hikâyemiz</a></li>
+          <li><a href="#siparis">Sipariş nasıl verilir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <ul>
+          <li><a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a id="footIg" href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li>Uşak, Türkiye</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy" id="copy"></div>
+  </div>
+</footer>
+
+<a class="float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp'tan yazın">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.2 1.6 6.03L4 28l7.1-1.86a12 12 0 0 0 4.94 1.06C22.68 27.2 28 21.8 28 15.04S22.68 3 16.04 3zm0 21.9c-1.6 0-3.17-.43-4.54-1.24l-.33-.2-4.2 1.1 1.12-4.1-.21-.34a9.87 9.87 0 0 1-1.52-5.28c0-5.46 4.44-9.9 9.9-9.9s9.9 4.44 9.9 9.9-4.44 10.06-10.1 10.06zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+</a>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Ürün detayı">
+  <div class="box" id="box"></div>
+</div>
+
+<script>
+/* ============================================================
+   AYARLAR  -  Siteyi değiştirmek için sadece bu bölüme dokunun
+   ============================================================ */
+const CONFIG = {
+  marka: "Senza Atelier",
+  whatsapp: "905XXXXXXXXX",     // Başında + olmadan, boşluksuz. Örnek: 905551234567
+  instagram: "",                 // Örnek: https://instagram.com/senzaatelier  (boşsa gizlenir)
+  sheetCsvUrl: "",               // Google Sheets "Web'de yayınla" CSV linki
+  paraBirimi: "₺",
+  mesaj: "Merhaba Senza Atelier, {urun} hakkında bilgi almak istiyorum.",
+  mesajStok: "Merhaba Senza Atelier, {urun} ürününün tekrar stoğa girip girmeyeceğini öğrenmek istiyorum.",
+
+  /* Ana sayfadaki üç kemer. "ad" değeri Google Sheets'teki kategori sütunuyla birebir aynı olmalı.
+     İstersen "gorsel" ekleyerek kendi fotoğrafını verebilirsin, vermezsen o kategorideki ilk ürünün fotoğrafı kullanılır. */
+  koleksiyonlar: [
+    { ad: "Çanta",             not: "Günlük ve özel anlar" },
+    { ad: "Ev Ürünleri",       not: "Yaşam alanınız için" },
+    { ad: "Banyo Paspasları",  not: "Konfor ve şıklık" }
+  ]
+};
+
+/* Sheet linki boşsa önizleme için örnek ürünler gösterilir */
+const DEMO = [
+  {kategori:"Çanta",ad:"Örnek Deri Omuz Çantası",fiyat:"1490",foto:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900",aciklama:"Gün boyu rahat taşınan, geniş iç hacimli omuz çantası.\nRenk: Taba",stok:"var",etiket:"Yeni"},
+  {kategori:"Çanta",ad:"Örnek Şehir Sırt Çantası",fiyat:"1190",foto:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900",aciklama:"Laptop bölmeli, su itici kumaş.",stok:"var",etiket:""},
+  {kategori:"Çanta",ad:"Örnek Mini El Çantası",fiyat:"890",foto:"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900",aciklama:"Özel günler için kompakt ve şık.",stok:"yok",etiket:""},
+  {kategori:"Ev Ürünleri",ad:"Örnek Dekoratif Sepet",fiyat:"540",foto:"",aciklama:"Düzen ve dekor bir arada.",stok:"var",etiket:""},
+  {kategori:"Ev Ürünleri",ad:"Örnek Yastık Kılıfı Seti",fiyat:"420",foto:"",aciklama:"İki parçalı set.",stok:"var",etiket:"Yeni"},
+  {kategori:"Banyo Paspasları",ad:"Örnek Pamuk Banyo Paspası",fiyat:"350",foto:"",aciklama:"Kaymaz tabanlı, yumuşak dokulu.",stok:"var",etiket:""}
+];
+
+/* ============================================================ */
+const $ = s => document.querySelector(s);
+const TR = s => String(s ?? "").toLocaleLowerCase("tr");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+let products = [], activeCat = "Tümü", query = "", sortMode = "", lastFocus = null;
+
+/* CSV ayrıştırıcı (tırnak ve satır sonu destekli) */
+function parseCSV(text){
+  const rows=[]; let row=[], cur="", q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i], n=text[i+1];
+    if(q){
+      if(c==='"' && n==='"'){cur+='"';i++}
+      else if(c==='"'){q=false}
+      else cur+=c;
+    }else{
+      if(c==='"') q=true;
+      else if(c===','){row.push(cur);cur=""}
+      else if(c==='\n'||c==='\r'){
+        if(c==='\r'&&n==='\n')i++;
+        row.push(cur);cur="";
+        if(row.some(x=>x.trim()!==""))rows.push(row);
+        row=[];
+      } else cur+=c;
+    }
+  }
+  row.push(cur); if(row.some(x=>x.trim()!==""))rows.push(row);
+  return rows;
+}
+
+/* Google Drive paylaşım linkini görüntülenebilir linke çevirir */
+function fixPhoto(u){
+  u=(u||"").trim();
+  const m=u.match(/drive\.google\.com\/file\/d\/([^/]+)/)||u.match(/drive\.google\.com\/open\?id=([^&]+)/)||u.match(/drive\.google\.com\/uc\?.*id=([^&]+)/);
+  return m ? "https://drive.google.com/thumbnail?id="+m[1]+"&sz=w1200" : u;
+}
+const photos = p => (p.foto||"").split("|").map(fixPhoto).filter(Boolean);
+
+function normalize(rows){
+  const head=rows[0].map(h=>h.trim().toLowerCase()
+    .replace(/ı/g,'i').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ö/g,'o').replace(/ç/g,'c'));
+  return rows.slice(1).map(r=>{
+    const o={}; head.forEach((h,i)=>o[h]=(r[i]||"").trim()); return o;
+  }).filter(p=>p.ad);
+}
+
+const waLink = t => "https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t);
+const isOut = p => TR(p.stok)==="yok";
+const orderLink = p => waLink((isOut(p)?CONFIG.mesajStok:CONFIG.mesaj).replace("{urun}", p.ad));
+const orderLabel = p => isOut(p) ? "Stok için yazın" : "WhatsApp'tan sipariş ver";
+
+function priceNum(p){
+  const v=parseFloat(String(p.fiyat).replace(/\./g,'').replace(',','.'));
+  return isNaN(v)?null:v;
+}
+function priceText(p){
+  if(!p.fiyat) return "Fiyat için yazın";
+  const v=priceNum(p);
+  return v===null ? esc(p.fiyat) : v.toLocaleString("tr-TR")+" "+CONFIG.paraBirimi;
+}
+const imgTag=(u,cls,alt,lazy)=>`<img class="${cls}" src="${esc(u)}" alt="${esc(alt)}" ${lazy?'loading="lazy"':''} onerror="this.remove()">`;
+
+/* Ana sayfadaki kemerler */
+function renderArches(){
+  $("#arches").innerHTML=CONFIG.koleksiyonlar.map(k=>{
+    const match=products.find(p=>TR(p.kategori)===TR(k.ad)&&photos(p).length);
+    const src=k.gorsel||(match?photos(match)[0]:"");
+    const n=products.filter(p=>TR(p.kategori)===TR(k.ad)).length;
+    return `<button class="arch" data-cat="${esc(k.ad)}" aria-label="${esc(k.ad)} koleksiyonunu gör">
+      <span class="arch-shape">${src?imgTag(src,"",k.ad,false):""}</span>
+      <span class="arch-name">${esc(k.ad)}</span>
+      <span class="arch-note">${esc(k.not||"")}${n?(k.not?", ":"")+n+" ürün":""}</span>
+    </button>`;
+  }).join("");
+  document.querySelectorAll(".arch").forEach(b=>b.onclick=()=>{
+    const name=products.find(p=>TR(p.kategori)===TR(b.dataset.cat))?.kategori||b.dataset.cat;
+    setCat(name,true);
+  });
+}
+
+function categories(){
+  const known=CONFIG.koleksiyonlar.map(k=>k.ad);
+  const extra=[...new Set(products.map(p=>p.kategori).filter(Boolean))].filter(c=>!known.some(k=>TR(k)===TR(c)));
+  const fromSheet=[...new Set(products.map(p=>p.kategori).filter(Boolean))];
+  const ordered=known.map(k=>fromSheet.find(c=>TR(c)===TR(k))).filter(Boolean);
+  return ["Tümü",...ordered,...extra];
+}
+function renderTabs(){
+  $("#tabs").innerHTML=categories().map(c=>`<button class="tab" aria-pressed="${TR(c)===TR(activeCat)}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>setCat(b.dataset.c,false));
+}
+function setCat(c,scroll){
+  activeCat=c; renderTabs(); renderGrid();
+  if(scroll) $("#koleksiyon").scrollIntoView({behavior:"smooth"});
+}
+
+function renderGrid(){
+  let list=products.filter(p=>
+    (activeCat==="Tümü"||TR(p.kategori)===TR(activeCat)) &&
+    TR(p.ad+" "+(p.kategori||"")+" "+(p.aciklama||"")).includes(query)
+  );
+  if(sortMode){
+    list=[...list].sort((a,b)=>{
+      const x=priceNum(a), y=priceNum(b);
+      if(x===null&&y===null)return 0; if(x===null)return 1; if(y===null)return -1;
+      return sortMode==="asc"?x-y:y-x;
+    });
+  }
+  $("#count").textContent=list.length+" ürün gösteriliyor";
+  if(!list.length){$("#grid").innerHTML='<div class="state">Aramanıza uygun ürün bulunamadı. Filtreyi değiştirmeyi deneyin.</div>';return}
+  $("#grid").innerHTML=list.map(p=>{
+    const i=products.indexOf(p), ph=photos(p), out=isOut(p);
+    return `<article class="card">
+      <button class="img" data-i="${i}" aria-label="${esc(p.ad)} detayını aç">
+        ${ph[0]?imgTag(ph[0],"first",p.ad,true):""}
+        ${ph[1]?imgTag(ph[1],"alt",p.ad,true):""}
+        ${out?'<span class="badge out">Tükendi</span>':(p.etiket?`<span class="badge">${esc(p.etiket)}</span>`:"")}
+      </button>
+      <div class="meta">
+        <span class="cat">${esc(p.kategori)}</span>
+        <button class="name" data-i="${i}">${esc(p.ad)}</button>
+        <span class="price">${priceText(p)}</span>
+        <a class="order" href="${orderLink(p)}" target="_blank" rel="noopener">${orderLabel(p)}</a>
+      </div></article>`;
+  }).join("");
+  document.querySelectorAll(".img,.name").forEach(el=>el.onclick=()=>openModal(+el.dataset.i));
+}
+
+/* Ürün penceresi */
+function openModal(i){
+  const p=products[i], ph=photos(p);
+  lastFocus=document.activeElement;
+  $("#box").innerHTML=`
+    <button class="close" id="closeBtn" aria-label="Kapat">✕</button>
+    <div class="gal">
+      <div class="main-wrap">${ph[0]?imgTag(ph[0],"",p.ad,false).replace('<img ','<img id="mainImg" '):""}</div>
+      ${ph.length>1?`<div class="thumbs">${ph.map((u,k)=>`<button class="${k===0?'on':''}" data-u="${esc(u)}" aria-label="Fotoğraf ${k+1}">${imgTag(u,"",p.ad,true)}</button>`).join("")}</div>`:""}
+    </div>
+    <div class="detail">
+      <span class="cat">${esc(p.kategori)}</span>
+      <h3>${esc(p.ad)}</h3>
+      <span class="price">${priceText(p)}</span>
+      <p class="desc">${esc(p.aciklama)}</p>
+      <a class="btn" href="${orderLink(p)}" target="_blank" rel="noopener">${orderLabel(p)}</a>
+    </div>`;
+  $("#modal").classList.add("open");
+  document.body.style.overflow="hidden";
+  $("#closeBtn").focus();
+  $("#closeBtn").onclick=closeModal;
+  document.querySelectorAll(".thumbs button").forEach(t=>t.onclick=()=>{
+    const m=$("#mainImg"); if(m) m.src=t.dataset.u;
+    document.querySelectorAll(".thumbs button").forEach(x=>x.classList.remove("on")); t.classList.add("on");
+  });
+}
+function closeModal(){
+  $("#modal").classList.remove("open");
+  document.body.style.overflow="";
+  if(lastFocus) lastFocus.focus();
+}
+$("#modal").onclick=e=>{if(e.target.id==="modal")closeModal()};
+document.addEventListener("keydown",e=>{
+  if(!$("#modal").classList.contains("open")) return;
+  if(e.key==="Escape") return closeModal();
+  if(e.key==="Tab"){
+    const f=[...$("#box").querySelectorAll("button,a[href]")]; if(!f.length) return;
+    const first=f[0], last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+  }
+});
+
+$("#search").oninput=e=>{query=TR(e.target.value).trim();renderGrid()};
+$("#sort").onchange=e=>{sortMode=e.target.value;renderGrid()};
+
+function applyConfig(){
+  const general=waLink("Merhaba Senza Atelier, bilgi almak istiyorum.");
+  ["#hdrWa","#heroWa","#footWa","#floatWa"].forEach(s=>$(s).href=general);
+  if(CONFIG.instagram) $("#footIg").href=CONFIG.instagram; else $("#footIg").parentElement.style.display="none";
+  $("#copy").textContent="© "+new Date().getFullYear()+" "+CONFIG.marka+". Tüm hakları saklıdır.";
+}
+
+async function init(){
+  applyConfig();
+  if(!CONFIG.sheetCsvUrl){products=DEMO}
+  else{
+    try{
+      const r=await fetch(CONFIG.sheetCsvUrl); if(!r.ok) throw 0;
+      products=normalize(parseCSV(await r.text()));
+    }catch(e){
+      renderArches();
+      $("#grid").innerHTML='<div class="state">Ürünler şu an yüklenemedi. Sayfayı yenileyin ya da bize WhatsApp\'tan yazın.</div>';
+      return;
+    }
+  }
+  renderArches(); renderTabs(); renderGrid();
+}
+init();
+</script>
+</body>
+</html>
